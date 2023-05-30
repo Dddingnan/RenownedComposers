@@ -1,0 +1,222 @@
+:root {
+    --main: #5c4d4d;
+    --white: #f2f1e7;
+    --lightBrown: #915b4a;
+    --darkBrown: #a96851;
+    --hyperlink: #a7a3ff;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    height: 80px;
+    background-color: var(--main);
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+}
+
+nav a {
+    color: var(--white);
+    font-size: 23px;
+    text-decoration: none;
+    padding: 0px 20px 25px 20px;
+    font-style: oblique;
+}
+
+nav a:hover  {
+    color: var(--lightBrown);
+}
+
+main {
+    background-color: var(--darkBrown);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 130px);
+}
+
+main h1 {
+    color: var(--white);
+    margin: 15px 0px 0px 0px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+footer {
+    height: 50px;
+    background-color: var(--main);
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+}
+
+footer p {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--white);
+}
+
+aside {
+    width: 80%;
+    height: 100%;
+}
+
+section {
+    width: 80%;
+    height: 100%;
+}
+
+hr {
+    width: 80%;
+    height: 100%;
+}
+
+/* Media query for small phones */ 
+@media only screen and (min-width : 320px) {
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+        height: 100%;
+    }
+    nav a {
+        font-size: 14px;
+        padding: 3px;
+    }
+    main h1 {
+        font-size: 17px;
+        color: var(--white);
+        margin: 15px 0px 0px 0px;
+        font-family: "Lucida Console", "Courier New", monospace;
+    }
+    footer p {
+        font-size: 13px;
+    }
+}
+
+
+/* Media query for smartphones */
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+        height: 100%;
+    }
+    nav a {
+        font-size: 15px;
+        padding: 10px;
+    }
+    main h1 {
+        font-size: 17px;
+        color: var(--white);
+        margin: 15px 0px 0px 0px;
+        font-family: "Lucida Console", "Courier New", monospace;
+    }
+    footer p {
+        font-size: 13px;
+    }
+}
+
+
+/* Media query for tablets */
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+    nav a {
+        color: var(--white);
+        font-size: 23px;
+        text-decoration: none;
+        padding: 0px 20px 25px 20px;
+        font-style: oblique;
+    }
+
+    aside {
+        width: 100%;
+        height: 100%;
+    }
+    
+    section {
+        width: 100%;
+        height: 100%;
+    }
+    
+    hr {
+        width: 100%;
+        height: 100%;
+    }
+    footer p {
+        font-size: 16px;
+    }
+  }
+
+
+/* Media query for laptops */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        height: 100%;
+    }
+
+    nav a {
+        color: var(--white);
+        font-size: 23px;
+        text-decoration: none;
+        padding: 0px 20px 25px 20px;
+        font-style: oblique;
+    }
+    
+    main h1 {
+        font-size: 23px;
+        color: var(--white);
+        margin: 15px 0px 0px 0px;
+        font-family: "Lucida Console", "Courier New", monospace;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+}
+
+/* Media query for desktop computers */
+@media only screen and (min-width: 1024px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        height: 100%;
+    }
+
+    nav a {
+        color: var(--white);
+        font-size: 23px;
+        text-decoration: none;
+        padding: 0px 20px 25px 20px;
+        font-style: oblique;
+    }
+    
+    main h1 {
+        font-size: 23px;
+        color: var(--white);
+        margin: 15px 0px 0px 0px;
+        font-family: "Lucida Console", "Courier New", monospace;
+    }
+    
+    footer p {
+        font-size: 16px;
+    }
+}

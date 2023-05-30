@@ -1,0 +1,171 @@
+@import "../global.css";
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+aside h2 {
+    color: var(--white);
+    font-style: oblique;
+}
+
+aside p {
+    color: var(--white);
+    font-size: 22px;
+    font-family: "Garamond", Times, serif;
+    margin: 5px;
+}
+
+section h2 {
+    color: var(--white);
+    font-family: "Garamond", Times, serif;
+    margin-top: 30px;
+}
+
+section h3 {
+    color: var(--white);
+    font-family: "Garamond", Times, serif;
+    text-decoration: underline;
+}
+
+section article ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    list-style: none;
+}
+
+section article ul li a {
+    color: black;
+    font-family: "Garamond", Times, serif;
+}
+
+section figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section figure figcaption {
+    color: var(--white);
+    font-family: "Garamond", Times, serif;
+}
+
+section figure img {
+    width: 500px;
+    height: 500px;
+}
+
+#composers {
+    font-family: "Garamond", Times, serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 18px;
+    margin: 20px 0px 30px 0px;
+}
+  
+#composers td, #composers th {
+    border: 1px solid var(--white);
+    padding: 8px;
+}
+  
+#composers tr:nth-child(even){background-color: var(--lightBrown);}
+  
+#composers tr:hover {background-color: var(--lightBrown);}
+  
+#composers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: var(--darkBrown);
+    color: var(--white);
+}
+
+#composers td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    color: var(--white);
+}
+
+#calculatorButton {
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 2px;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #f2f1e7;
+    color: #915b4a;
+    cursor: pointer;
+}
+
+/* Media query for small phones */ 
+@media only screen and (min-width : 320px) {
+    section figure img {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+
+/* Media query for smartphones */
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+    section figure img {
+        width: 300px;
+        height: 300px;
+    }
+    aside h2 {
+        font-size: 21px;
+    }
+    aside p {
+        font-size: 20px;
+    }
+    section h2 {
+        font-size: 21px;
+    }
+    section article ul {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    section article h3 {
+        font-size: 19px;
+    }
+
+    #calculatorButton {
+        width: 150px;
+        height: 45px;
+        font-size: 15px;
+    }
+}
+
+
+/* Media query for tablets */
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+    section figure img {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+
+/* Media query for laptops */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    section figure img {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+/* Media query for desktop computers */
+@media only screen and (min-width: 1024px) {
+    section figure img {
+        width: 500px;
+        height: 500px;
+    }
+}

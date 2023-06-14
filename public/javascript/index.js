@@ -37,6 +37,7 @@ const constructComposerTable = (composers) => {
 };
 
 window.onload = function () {
+  // TODO Make the shared fetching function
   fetch("static/data/eras.json")
     .then((response) => response.json())
     .then((eras) => constructMusicEra(eras));

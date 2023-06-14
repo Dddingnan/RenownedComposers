@@ -8,6 +8,12 @@ This project aims to offer a comprehensive yet brief introduction to my favorite
 
 ---
 
+## Hosting
+
+- https://cs601-8b24c.web.app
+
+---
+
 ## Built With
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -25,6 +31,20 @@ This project aims to offer a comprehensive yet brief introduction to my favorite
 ### Installation
 
 - None
+
+---
+
+### TODO List
+
+- Index
+  - Introduction to Music Theory
+  - Important Instruments
+  - Update table data by contorlled dom elements
+  - Update time line by contorlled dom elements
+- User
+  - Update google login button
+  - Show store page to store and update user's favorite songs of composers
+  - Add a playground to play piano
 
 ---
 

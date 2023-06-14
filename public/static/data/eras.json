@@ -1,0 +1,8 @@
+[
+    { "name": "Medieval Era (500-1400 AD)", "link": "https://en.wikipedia.org/wiki/Medieval_music" },
+    { "name": "Renaissance Era (1400-1600)", "link": "https://en.wikipedia.org/wiki/Renaissance_music" },
+    { "name": "Baroque Era (1600-1750)", "link": "https://en.wikipedia.org/wiki/Baroque_music" },
+    { "name": "Classical Era (1750-1820)", "link": "https://en.wikipedia.org/wiki/Classical_period_(music)" },
+    { "name": "Romantic Era (1820-1910)", "link": "https://en.wikipedia.org/wiki/Romantic_music" },
+    { "name": "Contemporary Era (1910-present)", "link": "https://en.wikipedia.org/wiki/Modernism_(music)" }
+]

@@ -1,0 +1,8 @@
+[
+    { "name": "Bach", "era": "Baroque era" },
+    { "name": "Mozart", "era": "Classical era" },
+    { "name": "Beethoven", "era": "Classical era" },
+    { "name": "Haydn", "era": "Classical era" },
+    { "name": "Chopin", "era": "Romantic era" },
+    { "name": "Tchaikovsky", "era": "Romantic era" }
+]

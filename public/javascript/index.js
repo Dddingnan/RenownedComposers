@@ -17,8 +17,31 @@ const constructMusicEra = (eras) => {
   });
 };
 
+const constructComposerTable = (composers) => {
+  const table = document.getElementById("composers");
+
+  composers.forEach((composer) => {
+    const tr = document.createElement("tr");
+
+    const tdName = document.createElement("td");
+    tdName.textContent = composer.name;
+
+    const tdEra = document.createElement("td");
+    tdEra.textContent = composer.era;
+
+    tr.appendChild(tdName);
+    tr.appendChild(tdEra);
+
+    table.appendChild(tr);
+  });
+};
+
 window.onload = function () {
   fetch("static/data/eras.json")
     .then((response) => response.json())
     .then((eras) => constructMusicEra(eras));
+
+  fetch("static/data/composerEra.json")
+    .then((response) => response.json())
+    .then((composers) => constructComposerTable(composers));
 };

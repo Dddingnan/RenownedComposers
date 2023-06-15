@@ -1,0 +1,22 @@
+@import "../global.css";
+
+.g-signin-button {
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    border: none;
+    background: url('../../images/google_normal.png') no-repeat;
+  }
+  
+.g-signin-button:hover {
+  background: url('../../images/google_focus.png') no-repeat;
+}
+
+#login-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+  flex-direction: column;
+}

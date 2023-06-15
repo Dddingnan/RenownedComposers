@@ -37,7 +37,6 @@ This project aims to offer a comprehensive yet brief introduction to my favorite
 ### TODO List
 
 - User
-  - Update google login button
   - Show store page to store and update user's favorite songs of composers
   - Add a playground to play piano
 

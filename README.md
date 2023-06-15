@@ -1,4 +1,4 @@
-# Assignment 3
+# Final Project
 
 ## About The Project
 

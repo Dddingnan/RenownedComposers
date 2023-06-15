@@ -12,19 +12,19 @@ aside h2 {
     font-style: oblique;
 }
 
-aside figure {
+figure {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-aside figure figcaption {
+figure figcaption {
     color: var(--white);
     font-family: "Garamond", Times, serif;
 }
 
-aside figure img {
+figure img {
     width: 300px;
     height: 300px;
 }

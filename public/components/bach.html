@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/global.css">
     <link rel="stylesheet" href="../static/css/components/composer.css">
+    <script type="module" src="../javascript/composer/bach.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.min.js"></script>
     <title>A Tribute to Renowned Composers</title>
 </head>
 
@@ -23,7 +25,7 @@
             <a href="user.html">User</a>
         </nav>
     </header>
-    <main>
+    <main id="app" v-if="composer">
         <h1>A Tribute to Renowned Composers</h1>
         <aside>
             <h2>Johann Sebastian Bach - <time>1685</time>-<time>1750</time></h2>
@@ -36,51 +38,24 @@
             <h2>Introduction</h2>
             <article>
                 <h3>Biography</h3>
-                <p>A renowned German composer of the Baroque period, celebrated for his profound influence on Western
-                    music. Born into a musical family, he held various prestigious positions, notably as Cantor of St.
-                    Thomas Church in Leipzig, where he composed many of his iconic works. While respected as an organist
-                    during his lifetime, Bach's recognition as a composer blossomed in the 19th century. Today, his
-                    intricate compositions, including the Brandenburg Concertos and the Mass in B minor, are admired for
-                    their intellectual depth, technical mastery, and artistic beauty, marking him as one of the greatest
-                    composers in history.</p>
+                <p>{{ composer.Biography }}</p>
             </article>
             <article>
                 <h3>Creations</h3>
                 <ul>
-                    <li>
+                    <li v-for="creation in composer.Creations">
                         <h3>
-                            <a href='https://en.wikipedia.org/wiki/Brandenburg_Concertos'>Brandenburg Concertos</a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href='https://en.wikipedia.org/wiki/The_Well-Tempered_Clavier'>The Well-Tempered
-                                Clavier</a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href='https://en.wikipedia.org/wiki/St_Matthew_Passion'>St. Matthew Passion</a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href='https://en.wikipedia.org/wiki/Mass_in_B_minor'>Mass in B minor</a>
+                            <a :href="creation.link">{{ creation.name }}</a>
                         </h3>
                     </li>
                 </ul>
             </article>
             <article>
                 <h3>Musical styles</h3>
-                <p>
-                    Johann Sebastian Bach's musical style is characterized by his profound understanding and technical
-                    mastery of the baroque style of music, particularly its polyphonic texture. His compositions
-                    frequently employ complex musical structures and forms, such as fugues, showcasing an intricate
-                    interweaving of melodic lines. Furthermore, Bach's works often exhibit a mathematical precision and
-                    balance, demonstrating his ability to unite intellectual depth with emotional expressiveness.</p>
+                <p>{{ composer.MusicalStyles }}</p>
             </article>
             <article>
-                <h3>My favorite composition - Toccata and Fugue in D minor, BWV 565</h3>
+                <h3>My favorite composition - {{ composer.FavoriteComposition.name }}</h3>
                 <div>
                     <audio controls>
                         <source src="../static/audio/Bach.mp3" type="audio/mpeg">
@@ -88,36 +63,20 @@
                     </audio>
                 </div>
             </article>
-
             <article>
                 <h3>Trivia or Fun Facts</h3>
-                <p>
-                    Johann Sebastian Bach, despite being a pivotal figure in the history of music, had a few quirks and
-                    fascinating aspects about his life. One such fact is that he was a part of an incredibly musical
-                    family, having fathered 20 children, seven of whom grew up to be influential composers themselves.
-                    He was also known for his stubbornness and insistence on perfection. A notable instance is when he
-                    walked over 280 miles to hear the famed organist Dieterich Buxtehude play and ended up overstaying
-                    his leave by several months, bewitched by the music!</p>
+                <p>{{ composer.Trivia }}</p>
             </article>
-
             <article>
                 <h3>Influences and Legacy</h3>
-                <p>
-                    Bach was influenced by many contemporary composers and the prevalent music styles of the time,
-                    particularly the Italian concerto form and the southern German organ tradition. His music, in turn,
-                    left an indelible mark on subsequent generations of composers. While his music fell into relative
-                    obscurity after his death, it was rediscovered and popularized in the 19th century by composers like
-                    Felix Mendelssohn. Bach's music has been hailed for its intellectual depth, technical mastery, and
-                    artistic beauty, profoundly impacting composers from Mozart to Chopin to Stravinsky, making him a
-                    cornerstone of Western classical music.</p>
+                <p>{{ composer.InfluencesAndLegacy.text }}</p>
                 <figure>
-                    <img src="../static/images/Bach_meme.jpg" alt="Bach_meme">
+                    <img :src="composer.InfluencesAndLegacy.imgSrc" alt="Bach_meme">
                     <figcaption>Fig 2. I'll Be Bach</figcaption>
                 </figure>
             </article>
         </section>
     </main>
-
     <footer>
         <p>
             &copy;2023. Dingnan Hsu. Open Source. Boston University

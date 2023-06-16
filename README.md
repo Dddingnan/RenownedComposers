@@ -37,8 +37,9 @@ This project aims to offer a comprehensive yet brief introduction to my favorite
 ### TODO List
 
 - User
-  - Show store page to store and update user's favorite songs of composers
+  - Add delete button to table
   - Add a playground to play piano
+- Check every page with html and css
 
 ---
 

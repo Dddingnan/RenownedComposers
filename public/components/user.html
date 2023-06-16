@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../static/css/global.css">
     <link rel="stylesheet" href="../static/css/components/index.css">
     <link rel="stylesheet" href="../static/css/components/user.css">
+    <link rel="stylesheet" href="../static/css/components/spinner.css">
     <script type="module" src="../javascript/firebase-init.js"></script>
     <script type="module" src="../javascript/user.js"></script>
     <title>A Tribute to Renowned Composers</title>
@@ -37,9 +38,24 @@
             <h2 id="username">User</h2>
             <img id="icon" src="../static/images/Bach_meme.jpg" alt="Default">
         </section>
-        <!-- Add all data table -->
-        <!-- Add double select to add and update data -->
+        <hr>
 
+        <section id="input-section">
+            <h2>Selector</h2>
+            <select id="composers-select"></select>
+            <select id="creations-select"></select>
+            <button id="select-button">Save</button>
+        </section>
+        <hr>
+
+        <section id="input-section">
+            <h2>User Data</h2>
+            <div id="data-table"></div>
+        </section>
+
+        <div id="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+        </div>
     </main>
     <footer>
         <p>

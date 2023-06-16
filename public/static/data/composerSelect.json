@@ -1,0 +1,128 @@
+[
+    {
+      "composer": "Bach",
+      "creations": [
+        {
+          "id": 1,
+          "name": "Brandenburg Concertos"
+        },
+        {
+          "id": 2,
+          "name": "The Well-Tempered Clavier"
+        },
+        {
+          "id": 3,
+          "name": "St. Matthew Passion"
+        },
+        {
+          "id": 4,
+          "name": "Mass in B minor"
+        }
+      ]
+    },
+    {
+      "composer": "Mozart",
+      "creations": [
+        {
+          "id": 1,
+          "name": "Symphony No. 40 in G minor, K. 550"
+        },
+        {
+          "id": 2,
+          "name": "The Marriage of Figaro"
+        },
+        {
+          "id": 3,
+          "name": "The Magic Flute"
+        },
+        {
+          "id": 4,
+          "name": "Requiem"
+        }
+      ]
+    },
+    {
+      "composer": "Beethoven",
+      "creations": [
+        {
+          "id": 1,
+          "name": "Symphony No. 5 in C minor, Op. 67"
+        },
+        {
+          "id": 2,
+          "name": "Symphony No. 9 in D minor, Op. 125"
+        },
+        {
+          "id": 3,
+          "name": "Piano Sonata No. 14 in C-sharp minor, Op. 27, No. 2"
+        },
+        {
+          "id": 4,
+          "name": "Fidelio"
+        }
+      ]
+    },
+    {
+      "composer": "Haydn",
+      "creations": [
+        {
+          "id": 1,
+          "name": "The \"London\" Symphonies"
+        },
+        {
+          "id": 2,
+          "name": "The Creation"
+        },
+        {
+          "id": 3,
+          "name": "String Quartets, Op. 33"
+        },
+        {
+          "id": 4,
+          "name": "\"Surprise\" Symphony (No. 94 in G Major)"
+        }
+      ]
+    },
+    {
+      "composer": "Chopin",
+      "creations": [
+        {
+          "id": 1,
+          "name": "Nocturnes"
+        },
+        {
+          "id": 2,
+          "name": "Ballades"
+        },
+        {
+          "id": 3,
+          "name": "Piano Concertos"
+        },
+        {
+          "id": 4,
+          "name": "Mazurkas and Polonaises"
+        }
+      ]
+    },
+    {
+      "composer": "Tchaikovsky",
+      "creations": [
+        {
+          "id": 1,
+          "name": "Swan Lake"
+        },
+        {
+          "id": 2,
+          "name": "The Nutcracker"
+        },
+        {
+          "id": 3,
+          "name": "Symphony No. 5 in E minor, Op. 64"
+        },
+        {
+          "id": 4,
+          "name": "Piano Concerto No. 1 in B-flat minor, Op. 23"
+        }
+      ]
+    }
+  ]

@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+import { getFirestore, doc, collection, getDocs, setDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+import { showLoadingSpinner, hideLoadingSpinner } from "./spinner.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDimCNRhaIN2GJl0r1_3-esIOk9GWgFsL4",
@@ -37,27 +38,30 @@ function signInWithGoogle() {
     });
 }
 
-async function addDocument() {
+async function addDocument(uid, composer, creation, callback) {
+  showLoadingSpinner();
   try {
-    await setDoc(doc(db, "users", "newUser"), {
-      firstName: "John",
-      lastName: "Doe",
-      born: 1990,
+    await setDoc(doc(db, uid, composer), {
+      creation,
     });
+    hideLoadingSpinner();
+    callback();
   } catch (e) {
+    hideLoadingSpinner();
     console.error("Error adding document: ", e);
   }
 }
 
-async function getDocument() {
-  const docRef = doc(db, "users", "newUser");
-  const docSnap = await getDoc(docRef);
-
-  if (docSnap.exists()) {
-    console.log("Document data:", docSnap.data());
-  } else {
-    console.log("No such document!");
-  }
+async function getAllDocuments(collectionName) {
+  showLoadingSpinner();
+  const dataCollection = collection(db, collectionName);
+  const snapshot = await getDocs(dataCollection);
+  const documents = snapshot.docs.map((doc) => ({
+    composer: doc.id,
+    data: doc.data(),
+  }));
+  hideLoadingSpinner();
+  return documents;
 }
 
-export { signInWithGoogle, addDocument, getDocument };
+export { signInWithGoogle, addDocument, getAllDocuments };

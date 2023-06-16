@@ -29,7 +29,15 @@
   flex-direction: row;
 }
 
-#username {
+#input-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section h2 {
     font-size: 23px;
     margin: 0px;
 }
@@ -39,4 +47,12 @@
     height: 100px;
     border-radius: 50px;
     margin-left: 15px;
+}
+
+select {
+  margin: 5px 0px;
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 17px;
 }

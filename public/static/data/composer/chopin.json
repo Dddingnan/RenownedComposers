@@ -1,0 +1,16 @@
+{
+    "Biography": "A Polish composer and virtuoso pianist of the Romantic period who wrote primarily for the solo piano. Born near Warsaw, he showed his musical talents at an early age and was soon composing and performing for the Polish aristocracy. In 1830, Chopin left Poland due to political unrest, and he eventually settled in Paris, where he composed, gave private piano lessons, and performed infrequently due to his fragile health. His innovative compositions, including nocturnes, mazurkas, waltzes, and polonaises, are known for their poetic expressiveness, rich harmonies, and technical demands. Chopin's health declined rapidly, and he died at the age of 39, but his music continues to be widely performed and beloved around the world.",
+    "Creations": [
+        {"name": "Nocturnes", "link": "https://en.wikipedia.org/wiki/Nocturne"},
+        {"name": "Ballades", "link": "https://en.wikipedia.org/wiki/Ballades_(Chopin)"},
+        {"name": "Piano Concertos", "link": "https://en.wikipedia.org/wiki/Piano_Concerto_No._1_(Chopin)"},
+        {"name": "Mazurkas and Polonaises", "link": "https://en.wikipedia.org/wiki/Mazurkas_(Chopin)"}
+    ],
+    "MusicalStyles": "He is known for his lyrical, expressive melodies, innovative harmonies, and demanding, intricate piano writing. His music is often highly emotional, reflecting the deeply personal, introspective nature of the Romantic period. Chopin's music, almost entirely written for solo piano, expanded the range of the instrument's expressive capabilities and revolutionized piano composition. His use of traditional Polish dance forms like the mazurka and polonaise also showcased his strong connection to his homeland.",
+    "FavoriteComposition": {"name": "Nocturne in C sharp minor", "audioSource": "../static/audio/Chopin.mp3"},
+    "Trivia": "Frédéric Chopin was extremely sensitive to the sound of music to the point that he could not bear to hear others play his compositions. He also had a distinct preference for playing in small, intimate settings rather than grand concert halls. Interestingly, despite being a piano virtuoso, Chopin had a fear of performing publicly. Most of his income came from giving private piano lessons to the Parisian elite. He had a famous love affair with the French novelist George Sand (Aurore Dupin).",
+    "InfluencesAndLegacy": {
+        "text": "Chopin was deeply influenced by his Polish roots. Many of his compositions, such as his mazurkas and polonaises, reflect the rhythms and melodies of Polish folk music. He transformed the piano's role, bringing unprecedented expressiveness and delicacy. His innovative harmonic language and lyrical melodies greatly influenced the Romantic era, and his works continue to be a staple in the repertoire of pianists worldwide. Composers like Liszt and Debussy were notably influenced by his works.",
+        "imgSrc": "../static/images/Chopin_meme.png"
+    }
+}

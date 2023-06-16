@@ -1,0 +1,16 @@
+{
+    "Biography": "An Austrian composer of the Classical period, known for his profound influence on Western music. Born a child prodigy, he started composing at the tender age of five and performed before European royalty. Throughout his short life, Mozart composed more than 800 works, many of which are considered pinnacles of symphonic, chamber, operatic, and choral music. His compositions, including famous works like Symphony No. 40, \"The Marriage of Figaro,\" and \"The Magic Flute,\" are celebrated for their melodic beauty, formal elegance, and emotional depth. Mozart died at the young age of 35, leaving a legacy that has profoundly shaped classical music.",
+    "Creations": [
+        {"name": "Symphony No. 40 in G minor, K. 550", "link": "https://en.wikipedia.org/wiki/Symphony_No._40_(Mozart)"},
+        {"name": "The Marriage of Figaro", "link": "https://en.wikipedia.org/wiki/The_Marriage_of_Figaro"},
+        {"name": "The Magic Flute", "link": "https://en.wikipedia.org/wiki/The_Magic_Flute"},
+        {"name": "Requiem", "link": "https://en.wikipedia.org/wiki/Requiem_(Mozart)"}
+    ],
+    "MusicalStyles": "As for Mozart's musical style, his compositions encapsulate the principles of the Classical era with their balance, clarity, and transparency. Mozart was known for his ability to blend different musical forms seamlessly, and his work often reflects a mastery of counterpoint, melody, and orchestral color. Furthermore, his music is celebrated for its emotional depth and richness, moving beyond the formal constraints of the Classical style to hint at the passionate intensity of the forthcoming Romantic era.",
+    "FavoriteComposition": {"name": "Symphony No. 40 in G minor, K. 550", "audioSource": "../static/audio/Mozart.mp3"},
+    "Trivia": "Wolfgang Amadeus Mozart was a prodigious talent from a very young age. He composed his first piece of music, Andante in C, when he was just five years old. Despite his incredible talent, Mozart was known for his playful and often mischievous personality. He loved billiards and dancing, was fond of practical jokes, and had a fascination with scatological humor, which is reflected in many of his letters. Another fascinating aspect of Mozart's life is his mysterious relationship with the Freemasons – he was a member, and many believe his music contains Masonic symbolism.",
+    "InfluencesAndLegacy": {
+        "text": "Mozart was profoundly influenced by many contemporary musicians, notably Johann Christian Bach, from whom he learnt the style of the modern piano concerto. His music represents a culmination of many different elements prevalent in the classical period. Mozart's compositions, characterized by their melodic beauty, formal elegance, and emotional depth, have had a profound influence on many future composers. Beethoven, who was deeply influenced by him, seems to have been in awe of Mozart's symphonic mastery. Even today, Mozart is hailed as a prodigy and genius, his works remaining a cornerstone of classical music repertoire.",
+        "imgSrc": "../static/images/Mozart_meme.jpg"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "Biography": "An Austrian composer of the Classical period, often referred to as the 'Father of the Symphony' and 'Father of the String Quartet' due to his pivotal role in the development of these forms. Born in a humble family, Haydn displayed musical talent early and was accepted into the choir of St. Stephen's Cathedral in Vienna, where he gained his musical training. He spent much of his career as a court musician for the wealthy Esterházy family, which provided him the opportunity to experiment and refine his compositions. Haydn's works, including symphonies, string quartets, and piano sonatas, are known for their development of the classical style, innovative form, and the use of folk-like themes. He also mentored and tutored many composers, including Ludwig van Beethoven, further cementing his legacy.",
+    "Creations": [
+        {"name": "The 'London' Symphonies", "link": "https://en.wikipedia.org/wiki/Symphony_No._104_(Haydn)"},
+        {"name": "The Creation", "link": "https://en.wikipedia.org/wiki/The_Creation_(Haydn)"},
+        {"name": "String Quartets, Op. 33", "link": "https://en.wikipedia.org/wiki/String_Quartets,_Op._33_(Haydn)"},
+        {"name": "\"Surprise\" Symphony (No. 94 in G Major)", "link": "https://en.wikipedia.org/wiki/Symphony_No._94_(Haydn)"}
+    ],
+    "MusicalStyles": "He was a central figure in the development of the Classical style, characterized by clarity, balance, and transparency. His works are known for their humor, use of folk-like melodies, exploration of new forms, and development of the sonata form. Haydn's innovative approach to musical structure and his expansion of the size and scope of instrumental genres like the symphony and string quartet had a significant influence on composers who followed, particularly Mozart and Beethoven.",
+    "FavoriteComposition": {"name": "String Quartet in G major, Op. 77 No. 1: II. Adagio", "audioSource": "../static/audio/Haydn.mp3"},
+    "Trivia": "Joseph Haydn was a playful character with a knack for musical jokes. In his 'Surprise' Symphony, he famously wrote a sudden loud chord to wake up the audience. He was employed by the Esterházy family for nearly 40 years, where he had a private orchestra at his disposal but was isolated from other composers and trends. He was a mentor to Mozart and a teacher of Beethoven. Interestingly, Haydn never married for love. He was unhappily married to Maria Anna Keller, who showed no interest in his music.",
+    "InfluencesAndLegacy": {
+        "text": "Haydn is often called the 'Father of the Symphony' and the 'Father of the String Quartet' because of his significant contributions to these forms. His work served as a foundation for the later development of the sonata form. Haydn's music, known for its humor, inventiveness, and formal mastery, had a profound influence on his contemporaries, including Mozart, and on future composers, notably Beethoven. His creation of the 'London' symphonies further established the popularity of the symphony and set the stage for the next century of orchestral music.",
+        "imgSrc": "../static/images/Haydn_meme.jpg"
+    }
+}

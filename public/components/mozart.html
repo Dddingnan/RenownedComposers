@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/global.css">
     <link rel="stylesheet" href="../static/css/components/composer.css">
+    <script type="module" src="../javascript/composer/mozart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.min.js"></script>
     <title>A Tribute to Renowned Composers</title>
 </head>
 
@@ -23,7 +25,7 @@
             <a href="user.html">User</a>
         </nav>
     </header>
-    <main>
+    <main id="app" v-if="composer">
         <h1>A Tribute to Renowned Composers</h1>
         <aside>
             <h2>Wolfgang Amadeus Mozart - <time>1756</time>-<time>1791</time></h2>
@@ -36,52 +38,24 @@
             <h2>Introduction</h2>
             <article>
                 <h3>Biography</h3>
-                <p>An Austrian composer of the Classical period, known for his profound influence on Western music. Born
-                    a child prodigy, he started composing at the tender age of five and performed before European
-                    royalty. Throughout his short life, Mozart composed more than 800 works, many of which are
-                    considered pinnacles of symphonic, chamber, operatic, and choral music. His compositions, including
-                    famous works like Symphony No. 40, "The Marriage of Figaro," and "The Magic Flute," are celebrated
-                    for their melodic beauty, formal elegance, and emotional depth. Mozart died at the young age of 35,
-                    leaving a legacy that has profoundly shaped classical music.</p>
+                <p>{{ composer.Biography }}</p>
             </article>
             <article>
                 <h3>Creations</h3>
                 <ul>
-                    <li>
+                    <li v-for="creation in composer.Creations">
                         <h3>
-                            <a href='https://en.wikipedia.org/wiki/Symphony_No._40_(Mozart)'>Symphony No. 40 in G minor,
-                                K. 550</a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href='https://en.wikipedia.org/wiki/The_Marriage_of_Figaro'>The Marriage of Figaro</a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href='https://en.wikipedia.org/wiki/The_Magic_Flute'>The Magic Flute</a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href='https://en.wikipedia.org/wiki/Requiem_(Mozart)'>Requiem</a>
+                            <a :href="creation.link">{{ creation.name }}</a>
                         </h3>
                     </li>
                 </ul>
             </article>
             <article>
                 <h3>Musical styles</h3>
-                <p>
-                    As for Mozart's musical style, his compositions encapsulate the principles of the Classical era with
-                    their balance, clarity, and transparency. Mozart was known for his ability to blend different
-                    musical forms seamlessly, and his work often reflects a mastery of counterpoint, melody, and
-                    orchestral color. Furthermore, his music is celebrated for its emotional depth and richness, moving
-                    beyond the formal constraints of the Classical style to hint at the passionate intensity of the
-                    forthcoming Romantic era.</p>
+                <p>{{ composer.MusicalStyles }}</p>
             </article>
             <article>
-                <h3>My favorite composition - Symphony No. 40 in G minor, K. 550</h3>
+                <h3>My favorite composition - {{ composer.FavoriteComposition.name }}</h3>
                 <div>
                     <audio controls>
                         <source src="../static/audio/Mozart.mp3" type="audio/mpeg">
@@ -89,36 +63,20 @@
                     </audio>
                 </div>
             </article>
-
             <article>
                 <h3>Trivia or Fun Facts</h3>
-                <p>
-                    Wolfgang Amadeus Mozart was a prodigious talent from a very young age. He composed his first piece
-                    of music, Andante in C, when he was just five years old. Despite his incredible talent, Mozart was
-                    known for his playful and often mischievous personality. He loved billiards and dancing, was fond of
-                    practical jokes, and had a fascination with scatological humor, which is reflected in many of his
-                    letters. Another fascinating aspect of Mozart's life is his mysterious relationship with the
-                    Freemasons – he was a member, and many believe his music contains Masonic symbolism.</p>
+                <p>{{ composer.Trivia }}</p>
             </article>
-
             <article>
                 <h3>Influences and Legacy</h3>
-                <p>
-                    Mozart was profoundly influenced by many contemporary musicians, notably Johann Christian Bach, from
-                    whom he learnt the style of the modern piano concerto. His music represents a culmination of many
-                    different elements prevalent in the classical period. Mozart's compositions, characterized by their
-                    melodic beauty, formal elegance, and emotional depth, have had a profound influence on many future
-                    composers. Beethoven, who was deeply influenced by him, seems to have been in awe of Mozart's
-                    symphonic mastery. Even today, Mozart is hailed as a prodigy and genius, his works remaining a
-                    cornerstone of classical music repertoire.</p>
+                <p>{{ composer.InfluencesAndLegacy.text }}</p>
                 <figure>
-                    <img src="../static/images/Mozart_meme.jpg" alt="Mozart_meme">
-                    <figcaption>Fig 2. That's cute!</figcaption>
+                    <img :src="composer.InfluencesAndLegacy.imgSrc" alt="Mozart_meme">
+                    <figcaption>Fig 2. That's cute</figcaption>
                 </figure>
             </article>
         </section>
     </main>
-
     <footer>
         <p>
             &copy;2023. Dingnan Hsu. Open Source. Boston University

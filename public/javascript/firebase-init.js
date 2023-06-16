@@ -38,6 +38,23 @@ function signInWithGoogle() {
     });
 }
 
+function signOutWithGoogle() {
+  signOut(auth)
+    .then(() => {
+      // Sign-out successful, remove userData from localStorage
+      localStorage.removeItem("userData");
+      document.getElementById("google-sign-in").style.display = "block";
+      document.getElementById("user-section").style.display = "none";
+      document.getElementById("username").innerText = "";
+      document.getElementById("icon").src = "";
+      document.getElementById("icon").alt = "";
+    })
+    .catch((error) => {
+      // An error happened during sign-out
+      console.log(error.message);
+    });
+}
+
 async function addDocument(uid, composer, creation, callback) {
   showLoadingSpinner();
   try {
@@ -63,5 +80,5 @@ async function getAllDocuments(collectionName) {
   hideLoadingSpinner();
   return documents;
 }
-
-export { signInWithGoogle, addDocument, getAllDocuments };
+// TODO Here Add signout button
+export { signInWithGoogle, signOutWithGoogle, addDocument, getAllDocuments };

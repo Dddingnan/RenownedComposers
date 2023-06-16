@@ -92,7 +92,6 @@ async function getUserCollectionData() {
     const { uid } = decodeUserData;
     const documents = await getAllDocuments(uid);
     populateTable(documents);
-    console.log("dddd", documents);
   }
 }
 

@@ -1,4 +1,4 @@
-import { signInWithGoogle, addDocument, getAllDocuments } from "./firebase-init.js";
+import { signInWithGoogle, signOutWithGoogle, addDocument, getAllDocuments } from "./firebase-init.js";
 import { showLoadingSpinner, hideLoadingSpinner } from "./spinner.js";
 
 let selectData;
@@ -6,17 +6,22 @@ let selectData;
 function getLocalStorageData() {
   const userData = localStorage.getItem("userData");
   const data = JSON.parse(userData);
-  // TODO
   if (data) {
     const { displayName, photoURL } = data;
     document.getElementById("google-sign-in").style.display = "none";
     document.getElementById("username").innerText = displayName;
     document.getElementById("icon").src = photoURL;
     document.getElementById("icon").alt = displayName;
+    getSelectData();
+    getUserCollectionData();
   } else {
     document.getElementById("user-section").style.display = "none";
+    document.getElementById("input-section").style.display = "none";
+    document.getElementById("user-header").style.display = "none";
+    document.getElementById("data-table").style.display = "none";
+    document.getElementById("hr1").style.display = "none";
+    document.getElementById("hr2").style.display = "none";
   }
-  console.log("getLocalStorageData ------ ", data);
 }
 
 function getSelectData() {
@@ -96,6 +101,8 @@ async function getUserCollectionData() {
 }
 
 function populateTable(data) {
+  // Add a delete button to a new th call action
+
   // Create table
   const table = document.createElement("table");
   table.id = "composers";
@@ -143,12 +150,13 @@ function populateTable(data) {
 }
 
 window.onload = function () {
-  // TODO Check what if user not login, then don't need to fetch data
-  getSelectData();
   getLocalStorageData();
-  getUserCollectionData();
   document.getElementById("google-sign-in").addEventListener("click", () => {
-    signInWithGoogle();
+    signInWithGoogle(() => {
+      getSelectData();
+      getUserCollectionData();
+    });
   });
   document.getElementById("select-button").addEventListener("click", handleSelect);
+  document.getElementById("google-sign-out").addEventListener("click", signOutWithGoogle);
 };

@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 import { getFirestore, doc, collection, getDocs, setDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 import { showLoadingSpinner, hideLoadingSpinner } from "./spinner.js";
 
@@ -21,7 +21,7 @@ const db = getFirestore(app);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
-function signInWithGoogle() {
+function signInWithGoogle(callback) {
   signInWithPopup(auth, provider)
     .then((result) => {
       const { uid, displayName, email, photoURL } = result.user;
@@ -29,9 +29,15 @@ function signInWithGoogle() {
       localStorage.setItem("userData", JSON.stringify(userData));
       document.getElementById("google-sign-in").style.display = "none";
       document.getElementById("user-section").style.display = "flex";
+      document.getElementById("input-section").style.display = "flex";
+      document.getElementById("user-header").style.display = "block";
+      document.getElementById("hr1").style.display = "block";
+      document.getElementById("hr2").style.display = "block";
+      document.getElementById("data-table").style.display = "block";
       document.getElementById("username").innerText = displayName;
       document.getElementById("icon").src = photoURL;
       document.getElementById("icon").alt = displayName;
+      callback();
     })
     .catch((error) => {
       console.log(error.message);
@@ -45,6 +51,11 @@ function signOutWithGoogle() {
       localStorage.removeItem("userData");
       document.getElementById("google-sign-in").style.display = "block";
       document.getElementById("user-section").style.display = "none";
+      document.getElementById("input-section").style.display = "none";
+      document.getElementById("data-table").style.display = "none";
+      document.getElementById("user-header").style.display = "none";
+      document.getElementById("hr1").style.display = "none";
+      document.getElementById("hr2").style.display = "none";
       document.getElementById("username").innerText = "";
       document.getElementById("icon").src = "";
       document.getElementById("icon").alt = "";
@@ -80,5 +91,5 @@ async function getAllDocuments(collectionName) {
   hideLoadingSpinner();
   return documents;
 }
-// TODO Here Add signout button
+
 export { signInWithGoogle, signOutWithGoogle, addDocument, getAllDocuments };

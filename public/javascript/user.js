@@ -1,4 +1,4 @@
-import { signInWithGoogle, signOutWithGoogle, addDocument, getAllDocuments } from "./firebase-init.js";
+import { signInWithGoogle, signOutWithGoogle, addDocument, getAllDocuments, deleteDocument } from "./firebase-init.js";
 import { showLoadingSpinner, hideLoadingSpinner } from "./spinner.js";
 
 let selectData;
@@ -17,6 +17,7 @@ function getLocalStorageData() {
   } else {
     document.getElementById("user-section").style.display = "none";
     document.getElementById("input-section").style.display = "none";
+    document.getElementById("data-section").style.display = "none";
     document.getElementById("user-header").style.display = "none";
     document.getElementById("data-table").style.display = "none";
     document.getElementById("hr1").style.display = "none";
@@ -96,13 +97,11 @@ async function getUserCollectionData() {
   if (decodeUserData) {
     const { uid } = decodeUserData;
     const documents = await getAllDocuments(uid);
-    populateTable(documents);
+    populateTable(documents, uid);
   }
 }
 
-function populateTable(data) {
-  // Add a delete button to a new th call action
-
+function populateTable(data, uid) {
   // Create table
   const table = document.createElement("table");
   table.id = "composers";
@@ -119,6 +118,10 @@ function populateTable(data) {
   th2.innerText = "Creation";
   headerRow.appendChild(th2);
 
+  const th3 = document.createElement("th");
+  th3.innerText = "Action";
+  headerRow.appendChild(th3);
+
   thead.appendChild(headerRow);
   table.appendChild(thead);
 
@@ -134,6 +137,15 @@ function populateTable(data) {
     const td2 = document.createElement("td");
     td2.innerText = item.data.creation;
     row.appendChild(td2);
+
+    const td3 = document.createElement("td");
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    deleteButton.onclick = async function () {
+      await deleteDocument(uid, item.composer, getUserCollectionData);
+    };
+    td3.appendChild(deleteButton);
+    row.appendChild(td3);
 
     tbody.appendChild(row);
   });

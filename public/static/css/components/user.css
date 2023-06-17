@@ -37,6 +37,14 @@
   flex-direction: column;
 }
 
+#data-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 section h2 {
     font-size: 23px;
     margin: 0px;
@@ -66,4 +74,11 @@ select {
   font-size: 16px;
   margin: 0px 0px 0px 20px;
   cursor: pointer;
+}
+
+/* Media query for laptops */
+@media only screen and (min-width: 200px) and (max-width: 1023px) {
+  #user-section {
+    flex-direction: column;
+  }
 }

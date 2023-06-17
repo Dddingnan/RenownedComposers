@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-import { getFirestore, doc, collection, getDocs, setDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+import { getFirestore, doc, collection, getDocs, setDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 import { showLoadingSpinner, hideLoadingSpinner } from "./spinner.js";
 
 const firebaseConfig = {
@@ -30,6 +30,7 @@ function signInWithGoogle(callback) {
       document.getElementById("google-sign-in").style.display = "none";
       document.getElementById("user-section").style.display = "flex";
       document.getElementById("input-section").style.display = "flex";
+      document.getElementById("data-section").style.display = "flex";
       document.getElementById("user-header").style.display = "block";
       document.getElementById("hr1").style.display = "block";
       document.getElementById("hr2").style.display = "block";
@@ -52,6 +53,7 @@ function signOutWithGoogle() {
       document.getElementById("google-sign-in").style.display = "block";
       document.getElementById("user-section").style.display = "none";
       document.getElementById("input-section").style.display = "none";
+      document.getElementById("data-section").style.display = "none";
       document.getElementById("data-table").style.display = "none";
       document.getElementById("user-header").style.display = "none";
       document.getElementById("hr1").style.display = "none";
@@ -92,4 +94,17 @@ async function getAllDocuments(collectionName) {
   return documents;
 }
 
-export { signInWithGoogle, signOutWithGoogle, addDocument, getAllDocuments };
+async function deleteDocument(collectionName, documentId, callback) {
+  showLoadingSpinner();
+  try {
+    await deleteDoc(doc(db, collectionName, documentId));
+    hideLoadingSpinner();
+    callback();
+    console.log("Document successfully deleted!");
+  } catch (e) {
+    hideLoadingSpinner();
+    console.error("Error removing document: ", e);
+  }
+}
+
+export { signInWithGoogle, signOutWithGoogle, addDocument, getAllDocuments, deleteDocument };

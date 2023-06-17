@@ -3,7 +3,7 @@
 ## About The Project
 
 ```
-This project aims to offer a comprehensive yet brief introduction to my favorite composers. In eachcomposer's section, I will feature a concise biography, touching on their life's journey. The sections will further delve into an exploration of their most notable creations. Emphasis will be given to the distinct musical styles of each composer, elucidating how their unique approach and techniques have influenced the evolution of classical music over time.
+This project aims to offer a comprehensive yet brief introduction to my favorite composers. In each composer's section, I will feature a concise biography, touching on their life's journey. The sections will further delve into an exploration of their most notable creations. Emphasis will be given to the distinct musical styles of each composer, elucidating how their unique approach and techniques have influenced the evolution of classical music over time.
 ```
 
 ---
@@ -37,9 +37,7 @@ This project aims to offer a comprehensive yet brief introduction to my favorite
 ### TODO List
 
 - User
-  - Add delete button to table
   - Add a playground to play piano
-- Check every page with html and css
 
 ---
 
